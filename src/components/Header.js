@@ -7,7 +7,7 @@ function Header() {
   return (
     <>
       <div className="navbar">
-        <img src={LOGO} alt="Logo header" className="LOGO" />
+        <img src={LOGO} alt="Logo header" className="logo" />
         <div className="lien-navbar">
           <Link to="/"className="link-nav">Accueil</Link>
           <Link to="/about"className="link-nav">A Propos</Link>

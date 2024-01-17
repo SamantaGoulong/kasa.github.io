@@ -1,8 +1,23 @@
 .navbar{
     display: flex;
-    margin: 20px 80px 30px 80px ;
+    margin: 30px 60px 30px 60px;
     justify-content: space-between;
+    align-items: center;
 
+    @media screen and (max-width: 768px){
+        margin: 40px; 
+    }
+    @media screen and (max-width: 320px) {
+        margin: 20px;
+    }
+
+    .logo{
+        @media screen and (max-width: 768px) {
+            width: 30%;
+            height: 30%;
+        }
+
+    }
     .lien-navbar{
         display: flex;
         align-items: center;
@@ -11,6 +26,10 @@
             color: #ff6060;
             text-decoration: none;
             padding: 20px;
+
+            @media screen and (max-width: 533px) {
+                padding: 10px;
+            }
         }
     }
 }

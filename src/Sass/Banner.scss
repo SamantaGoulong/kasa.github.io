@@ -10,12 +10,20 @@
         object-fit: cover;
         border-radius: 20px;
 
+        @media screen and (max-width: 1024px) {
+            height: 110px;
+        }
     }
 
     h1 {
         display: flex;
         color: white;
         position: absolute;
-        font-size: 75px;
+        font-size: 60px;
+
+        @media screen and (max-width: 970px) {
+            font-size: 40px;
+            margin: 0px 15px 0px 20px;
+        }
     }
 }
