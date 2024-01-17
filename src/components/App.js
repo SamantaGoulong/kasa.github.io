@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Footer from '../components/Footer';
+import Error from '../pages/Error'
 
 function App() {
   console.log(data);
