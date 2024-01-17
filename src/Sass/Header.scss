@@ -1,0 +1,16 @@
+.navbar{
+    display: flex;
+    margin: 20px 80px 30px 80px ;
+    justify-content: space-between;
+
+    .lien-navbar{
+        display: flex;
+        align-items: center;
+
+        .link-nav{
+            color: #ff6060;
+            text-decoration: none;
+            padding: 20px;
+        }
+    }
+}
