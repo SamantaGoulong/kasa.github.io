@@ -1,0 +1,101 @@
+.FicheLogement-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    
+
+    .FicheLogement-card-left {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    
+        
+
+        .TitleFicheLogement {
+            width: 100%;
+            color: #ff6060;
+            font-size: 30px;
+            font-weight: 600;
+           
+            // margin: 30px 0px 10px 0px;
+        }
+
+        .VilleFicheLogement {
+            width: 100%;
+            // color: #ff6060;
+            font-size: 20px;
+            
+        }
+
+        .FicheLogement-filtre {
+            width: 100px;
+            background-color: #ff6060;
+            border-radius: 8px;
+            border: none;
+            color: white;
+            margin-right: 20px;
+        }
+    }
+     
+    .FicheLogement-card-right {
+height: 0;
+
+        .MetroFicheLogement {
+            color: #ff6060;
+            font-size: 20px;
+           //width: 20px;
+            // display: flex;
+            // flex-wrap: wrap;
+            position: relative;
+            bottom: 50px;
+            left: 630px;
+            // position: absolute;
+            // bottom: 160px;
+            // left:1260px
+        }
+
+        .picture {
+            width: 60px;
+            height: 60px;
+            background-color: #c4c4c4;
+            border: none;
+            border-radius: 50%;
+            // position: relative;
+            // bottom: 100px;
+            // left: 730px;
+            position: absolute;
+            bottom: 140px;
+            left: 1430px
+        }
+
+        .sr-only {
+            // width: 50%;
+            position: relative;
+            bottom: 100px;
+            left: 680px;
+        }
+    }
+        
+    .FicheLogement-select-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    
+
+        .FicheLogement-select {
+                width: 45%;
+                height: 50px;
+                background-color: #ff6060;
+                border-radius: 8px;
+                border: none;
+                color: white;
+                font-size: 20px;
+                margin-top: 30px;
+                padding-left: 20px;
+        }
+    }  
+}
