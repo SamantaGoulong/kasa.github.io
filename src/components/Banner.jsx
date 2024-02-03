@@ -1,13 +1,12 @@
 import '../Sass/Banner.scss';
-import ImageBannerHome from '../assets/images/ImageBannerHome.png'
 
-function Banner() {
+function Banner({image, text}) {
  
   return (
     <>
       <div className="banner-container">
-        <img src={ImageBannerHome} alt="photo d'un paysage" className="img-banner" />
-        <h1>Chez vous, partout et ailleurs</h1>
+        <img src={image} alt="photo d'un paysage" className="img-banner" />
+        <h1>{text}</h1>
       </div>
     </>
   );
