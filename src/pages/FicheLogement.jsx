@@ -24,10 +24,10 @@ function FicheLogement() {
             setTitle(selectedLogement.title)
             setLocation(selectedLogement.location)
             setTags(selectedLogement.tags)
-            setName(selectedLogement.name)
-            setPicture(selectedLogement.picture)
-          setDescription(selectedLogement.description)
-              setEquipments(selectedLogement.equipments)
+            setName(selectedLogement.host.name)
+            setPicture(selectedLogement.host.picture)
+            setDescription(selectedLogement.description)
+            setEquipments(selectedLogement.equipments)
             ;
         } else {
             setTitle('Appartement non trouvé')
@@ -40,35 +40,35 @@ function FicheLogement() {
         <div className="FicheLogement-container" >
          <Slideshow /> 
       {/* cover /pictures */}
-        
-          <div className="FicheLogement-card-left" >
-          <h2 className="TitleFicheLogement">{title}</h2>
-          <p className="LocationFicheLogement">{location}</p>
-          <button className="FicheLogement-tags">{tags}</button>
+        <div className="container-info">
+          <div className="FicheLogement-info-left" >
+            <h2 className="TitleFicheLogement">{title}</h2>
+            <p className="LocationFicheLogement">{location}</p>
+            <button className="FicheLogement-tags">{tags}</button>
           </div>
 
-   {/* host */}
-          <div className="FicheLogement-card-right" >
-           {/* name */}
-         <p className="NameFicheLogement">{name}</p>
-          {/* picture */}
-          <button className="PictureFicheLogement">{picture}</button>
-           <div class="stars">
+          <div className="FicheLogement-info-right" >
+            <p className="NameFicheLogement">{name}</p>
+            <img src={picture} alt="photo de profil" className="PictureFicheLogement" />
+            
+            <div class="etoile-container">
               <img src={etoile} alt="etoile" className="etoileFicheLogement" />
               <img src={etoile} alt="etoile" className="etoileFicheLogement" />
               <img src={etoile} alt="etoile" className="etoileFicheLogement" />
               <img src={etoile} alt="etoile" className="etoileFicheLogement" />
               <img src={etoile} alt="etoile" className="etoileFicheLogement" />
-           </div>  
+            </div>  
+          </div>
+        </div>
 
-         </div>  
-         <div className="FicheLogement-Collapse-container">
-           {/* description */}
-           <Collapse titleCollapse="Description" contentCollapse= {description} />
-           {/* equipements */}
-           <Collapse titleCollapse="Equipements" contentCollapse= {equipments} />
-         </div>
-
+        <div className="FicheLogement-Collapse-container">
+          <div className="description">
+            <Collapse titleCollapse="Description" contentCollapse= {description} />
+          </div>
+          <div className="equipements">
+            <Collapse titleCollapse="Equipements" contentCollapse={equipments} />
+          </div>
+        </div>
       </div>
   
   

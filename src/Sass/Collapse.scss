@@ -1,48 +1,50 @@
-.titleCollapse{
-    width: 60%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
-    background-color: #ff6060;
-    margin-top: 20px;
-    padding: 0px 20px 0px 20px; 
-    color: white;
-    font-size: 20px;
+.containerCollapse{
+    width: 100%;
 
-    @media screen and (max-width: 425px) {
-        width: 80%;
-    }
+    .titleCollapse{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        background-color: #ff6060;
+        margin-top: 20px;
+        color: white;
+        font-size: 20px;
+        padding-left: 10px;
 
-    button{
-        border: none;
-        background-color: #ff6060; 
-
-        .arrowTop {
-            display: flex;
+        @media screen and (max-width: 425px) {
+            width: 80%;
         }
 
-        .arrowBottom {
-            display: flex;
+        button{
+            border: none;
+            background-color: #ff6060; 
+
+            .arrowTop {
+                display: flex;
+            }
+
+            .arrowBottom {
+                display: flex;
+            }
+        }
+    }
+
+    .contentCollapse{
+        background-color:#E5E5E5;
+        height:auto;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        color: #ff6060;
+        font-size: 18px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+
+        @media screen and (max-width: 425px) {
+            width: 80%;
         }
     }
 }
-
-.contentCollapse{
-    background-color:#E5E5E5;
-    width: 60%;
-    height:auto;
-    color: #ff6060;
-    font-size: 18px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 20px;
-
-    @media screen and (max-width: 425px) {
-        width: 80%;
-    }
-}
-
-
-

@@ -2,115 +2,97 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    //justify-content: center;
+    justify-content: center;
     align-items: center;
     
-
-    .FicheLogement-card-left {
+    .container-info{
+        width: 90%;
         display: flex;
-        flex-wrap: wrap;
-        width: 90%;
-    
-        
+        justify-content: space-between;
+        margin: 20px 0px 20px 0px;
 
-        .TitleFicheLogement {
-            width: 100%;
-            color: #ff6060;
-            font-size: 30px;
-            font-weight: 600;
-             margin: 30px 0px 10px 0px;
-        }
-
-        .LocationFicheLogement {
-            width: 100%;
-            color: #ff6060;
-            font-size: 20px;
-            
-        }
-
-        .FicheLogement-tags {
-            width: 100px;
-            background-color: #ff6060;
-            border-radius: 8px;
-            border: none;
-            color: white;
-            margin: 20px 20px 0px 0px;
-        }
-    }
-     
-    .FicheLogement-card-right {
-height: 0;
-width: 30%; 
-
- position: relative;
-            bottom: 100px;
-            left: 730px;
-
-        
-
-        .NameFicheLogement {
-          
-            color: #ff6060;
-            font-size: 20px;
-            background-color: aqua;
-            // display: flex;
-            // flex-wrap: wrap;
-            // position: relative;
-            // bottom: 50px;
-            // left: 630px;
-            // position: absolute;
-            // bottom: 160px;
-            // left:1260px
-        }
-
-        .PictureFicheLogement {
-            width: 60px;
-            height:60px;
-            background-color: #c4c4c4;
-            border: none;
-            border-radius: 50%;
+        .FicheLogement-info-left {
+            width: 45%;
+            display: flex;
+            flex-wrap: wrap;
            
+            .TitleFicheLogement { 
+                width: 100%; 
+                color: #ff6060; 
+                font-size: 40px; 
+                font-weight: 500;
+            }
 
-            // position: absolute;
-            // bottom: 140px;
-            // left: 1430px
+            .LocationFicheLogement {  
+                width: 100%; 
+                color: #ff6060; 
+                font-size: 18px;  
+            }
+
+            .FicheLogement-tags {  
+                width: 100px;  
+                background-color: #ff6060;  
+                border-radius: 8px;  
+                border: none;  
+                color: white;  
+                margin: 20px 20px 0px 0px;  
+            }
         }
-
-        .stars{
-             width: 50%;
-        //     position: relative;
-        //     bottom: 100px;
-        //     left: 680px;
-         }
-    }
         
-    .FicheLogement-Collapse-container {
-        width: 90%;
-        // display: flex;
-        // justify-content: space-between;
-        // margin-bottom: 40px;
-    
+        .FicheLogement-info-right {  
+            width: 45%;
+            display: flex;
+            flex-wrap: wrap;  
+            justify-content: flex-end; 
+ 
+            .NameFicheLogement { 
+                width: 45%;
+                display: flex;
+                justify-content: flex-end;
+                color: #ff6060;
+                font-size: 20px;
+            }
 
-        .titleCollapse{
-                width: 45%;
-                height: 50px;
-                background-color: #ff6060;
-                border-radius: 8px;
-                border: none;
-                color: white;
-                font-size: 20px;
-                margin-top: 30px;
-                padding-left: 20px;
+            .PictureFicheLogement { 
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: flex-end;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .etoile-container{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                .etoileFicheLogement{
+                    width: 5%;
+                    margin-top: 10px;
+                }
+            }
         }
-        .contentCollapse {
-                width: 45%;
-                height: auto;
-                border: none;
-                color: white;
-                font-size: 20px;
-                padding-left: 20px;
-                
+    }      
+    .FicheLogement-Collapse-container{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        gap: 50px;
+
+        .description{
+            width: 50%;
+            display: flex;
+            //flex-direction: column;
+            justify-content: center;
+        }
+
+        .equipements{
+            width: 50%;
+            display: flex;
+            //flex-direction: column;
+            justify-content: center;
         }
     }
 }
