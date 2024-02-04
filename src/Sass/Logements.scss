@@ -1,4 +1,4 @@
-.logements-link{
+.logements-link {
     width: 30%;
     display: flex;
     justify-content: center;
@@ -7,7 +7,7 @@
     text-decoration: none;
 
     @media screen and (max-width: 1224px) {
-        width: 40%;  
+        width: 40%;
     }
 
     @media screen and (max-width: 768px) {
@@ -18,17 +18,17 @@
         width: 100%;
     }
 
-    .logements-card{
-        width:100%;
+    .logements-card {
+        width: 100%;
         height: 250px;
         display: flex;
         flex-wrap: wrap;
-        margin: 20px ;
+        margin: 20px;
 
         .logements-img {
             width: 100%;
             height: 250px;
-            border-radius: 10px; 
+            border-radius: 10px;
             object-fit: cover;
         }
 
@@ -39,6 +39,6 @@
             position: relative;
             bottom: 50px;
             left: 20px;
-        } 
-    }        
+        }
+    }
 }

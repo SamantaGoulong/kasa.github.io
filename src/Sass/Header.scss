@@ -1,28 +1,27 @@
-.navbar{
+.navbar {
     display: flex;
     margin: 30px 60px 30px 60px;
     justify-content: space-between;
     align-items: center;
 
-    @media screen and (max-width: 768px){
-        margin: 40px; 
+    @media screen and (max-width: 768px) {
+        margin: 40px;
     }
     @media screen and (max-width: 320px) {
         margin: 20px;
     }
 
-    .logo{
+    .logo {
         @media screen and (max-width: 768px) {
             width: 30%;
             height: 30%;
         }
-
     }
-    .lien-navbar{
+    .lien-navbar {
         display: flex;
         align-items: center;
 
-        .link-nav{
+        .link-nav {
             color: #ff6060;
             text-decoration: none;
             padding: 20px;
