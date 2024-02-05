@@ -16,7 +16,9 @@ function FicheLogement() {
     const [picture, setPicture] = useState('')
     const [description, setDescription] = useState('')
     const [equipments, setEquipments] = useState([])
-    // const [equipments, setEquipments] = useState('')
+    // const [cover, setCover] = useState('')
+    // const [pictures, setPictures] = useState([])
+
     useEffect(() => {
         const selectedLogement = data.find((item) => item.id === id)
         if (selectedLogement) {
@@ -26,8 +28,9 @@ function FicheLogement() {
             setName(selectedLogement.host.name)
             setPicture(selectedLogement.host.picture)
             setDescription(selectedLogement.description)
-            // setEquipments(selectedLogement.equipments)
             setEquipments(selectedLogement.equipments)
+            // setCover(selectedLogement.cover)
+            // setPictures(selectedLogement.pictures)
         } else {
             setTitle('Logement non trouvé')
         }
