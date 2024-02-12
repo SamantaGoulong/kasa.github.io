@@ -3,7 +3,8 @@ import '../Sass/FicheLogement.scss'
 import Slideshow from '../components/Slideshow.jsx'
 import Collapse from '../components/Collapse'
 import data from '../data.json'
-import etoile from '../assets/images/etoile.png'
+import etoileGrise from '../assets/images/etoileGrise.png'
+import etoileRouge from '../assets/images/etoileRouge.png'
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -16,8 +17,10 @@ function FicheLogement() {
     const [picture, setPicture] = useState('')
     const [description, setDescription] = useState('')
     const [equipments, setEquipments] = useState([])
-    // const [cover, setCover] = useState('')
-    // const [pictures, setPictures] = useState([])
+
+    const [rating,setRating] = useState('')
+    const range = [1, 2, 3, 4, 5]
+
 
     useEffect(() => {
         const selectedLogement = data.find((item) => item.id === id)
@@ -29,52 +32,76 @@ function FicheLogement() {
             setPicture(selectedLogement.host.picture)
             setDescription(selectedLogement.description)
             setEquipments(selectedLogement.equipments)
-            // setCover(selectedLogement.cover)
-            // setPictures(selectedLogement.pictures)
+            setRating(selectedLogement.rating)
         } else {
             setTitle('Logement non trouvé')
         }
     }, [id])
+    
     return (
         <>
             <div className="FicheLogement-container">
                 <Slideshow />
-                {/* cover /pictures */}
                 <div className="container-info">
                     <div className="FicheLogement-info-left">
                         <h2 className="TitleFicheLogement">{title}</h2>
                         <p className="LocationFicheLogement">{location}</p>
-                        {/* <button className="FicheLogement-tags">{tags}</button> */}
                         <div className="FicheLogement-tags-container">
-                        {tags.map((item, index) => (
-                            <button className="FicheLogement-tags" key={index}>
-                                {item}
-                            </button>
-                        ))}
-
+                            {tags.map((item, index) => (
+                                <button className="FicheLogement-tags" key={index}>
+                                    {item}
+                                </button>
+                            ))}
                         </div>
                     </div>
 
                     <div className="FicheLogement-info-right">
-                        <p className="NameFicheLogement">{name}</p>
-                        <img src={picture} alt="photo de profil" className="PictureFicheLogement" />
+                        <p className="NameFicheLogement numero-rang-name">{name}</p>
+                        <img
+                            src={picture}
+                            alt="profil"
+                            className="PictureFicheLogement numero-rang-profil"
+                        />
 
-                        <div class="etoile-container">
-                            <img src={etoile} alt="etoile" className="etoileFicheLogement" />
-                            <img src={etoile} alt="etoile" className="etoileFicheLogement" />
-                            <img src={etoile} alt="etoile" className="etoileFicheLogement" />
-                            <img src={etoile} alt="etoile" className="etoileFicheLogement" />
-                            <img src={etoile} alt="etoile" className="etoileFicheLogement" />
+                        <div className="etoile-container numero-rang-etoile">
+                            
+                            {range.map((rangeElem) =>
+                                rating >= rangeElem ? (
+                                    <span key={rangeElem.toString()}>
+                                        <img
+                                            src={etoileRouge}
+                                            className="etoileFicheLogement"
+                                            alt="etoile"
+                                        />
+                                    </span>
+                                ) : (
+                                    <span key={rangeElem.toString()}>
+                                        <img
+                                            src={etoileGrise}
+                                            className="etoileFicheLogement"
+                                            alt="etoile"
+                                        />
+                                    </span>
+                                )
+                            )}
                         </div>
                     </div>
                 </div>
 
                 <div className="FicheLogement-Collapse-container">
                     <div className="description">
-                        <Collapse titleCollapse="Description" contentCollapse={description} />
+                        {/* <Collapse titleCollapse="Description" contentCollapse={description}> */}
+                        <Collapse titleCollapse="Description">{description}</Collapse>
                     </div>
                     <div className="equipements">
-                        <Collapse titleCollapse="Equipements" equipments={equipments} />
+                        <Collapse titleCollapse="Equipements">
+                            <ul>
+                                {equipments &&
+                                    equipments.map((equipment, index) => (
+                                        <li key={index}>{equipment}</li>
+                                    ))}
+                            </ul>{' '}
+                        </Collapse>
                     </div>
                 </div>
             </div>

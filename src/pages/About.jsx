@@ -11,7 +11,7 @@ function About() {
                 <div className="Collapse-container">
                     <Collapse
                         titleCollapse="Fiabilité"
-                        contentCollapse="Les annonces postées sur Kasa garantissent une fiabiité totale. Les photos sont conformes aux logements, et toutes les informatinos sont régulièrement vérifiées par nos équipes."
+                        contentCollapse="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informatinos sont régulièrement vérifiées par nos équipes."
                     />
                     <Collapse
                         titleCollapse="Respect"

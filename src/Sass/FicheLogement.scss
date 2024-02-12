@@ -4,95 +4,159 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
-    .container-info{
+
+    .container-info {
         width: 90%;
         display: flex;
         justify-content: space-between;
         margin: 20px 0px 20px 0px;
-
+        @media screen and (max-width: 425px) {
+            display: flex;
+            flex-direction: column;
+        }
         .FicheLogement-info-left {
             width: 45%;
             display: flex;
             flex-wrap: wrap;
-           
-            .TitleFicheLogement { 
-                width: 100%; 
-                color: #ff6060; 
-                font-size: 40px; 
+            @media screen and (max-width: 425px) {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .TitleFicheLogement {
+                width: 100%;
+                color: #ff6060;
+                font-size: 40px;
                 font-weight: 500;
+                @media screen and (max-width: 425px) {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                }
             }
 
-            .LocationFicheLogement {  
-                width: 100%; 
-                color: #ff6060; 
-                font-size: 18px;  
+            .LocationFicheLogement {
+                width: 100%;
+                color: #ff6060;
+                font-size: 18px;
             }
 
-            .FicheLogement-tags {  
-                width: 100px;  
-                background-color: #ff6060;  
-                border-radius: 8px;  
-                border: none;  
-                color: white;  
-                margin: 20px 20px 0px 0px;  
+            .FicheLogement-tags {
+                width: 100px;
+                background-color: #ff6060;
+                border-radius: 8px;
+                border: none;
+                color: white;
+                margin: 20px 20px 0px 0px;
             }
         }
-        
-        .FicheLogement-info-right {  
+
+        .FicheLogement-info-right {
             width: 45%;
             display: flex;
-            flex-wrap: wrap;  
-            justify-content: flex-end; 
- 
-            .NameFicheLogement { 
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            @media screen and (max-width: 425px) {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+
+            .NameFicheLogement {
                 width: 45%;
                 display: flex;
                 justify-content: flex-end;
                 color: #ff6060;
                 font-size: 20px;
+                @media screen and (max-width: 425px) {
+                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
 
-            .PictureFicheLogement { 
+            .PictureFicheLogement {
                 width: 80px;
                 height: 80px;
                 display: flex;
                 justify-content: flex-end;
                 object-fit: cover;
                 border-radius: 50%;
+                @media screen and (max-width: 425px) {
+                    width: 25%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
 
-            .etoile-container{
+            .etoile-container {
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
+                @media screen and (max-width: 425px) {
+                    width: 50%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
 
-                .etoileFicheLogement{
-                    width: 5%;
+                .etoileFicheLogement {
+                    width: 100%;
+                    height: 30px;
                     margin-top: 10px;
+                    
+                    @media screen and (max-width: 425px) {
+                        width: 10%;
+                    }
                 }
             }
+            .numero-rang-name {
+                order: 2;
+            }
+            .numero-rang-profil {
+                order: 3;
+            }
+            .numero-rang-etoile {
+                order: 1;
+            }
         }
-    }      
-    .FicheLogement-Collapse-container{
+    }
+    .FicheLogement-Collapse-container {
         width: 100%;
         display: flex;
         justify-content: center;
         margin-bottom: 20px;
         // gap: 10px;
 
-        .description{
-            width: 50%;
+        @media screen and (max-width: 425px) {
+            width: 100%;
             display: flex;
-            //flex-direction: column;
-            justify-content: center;
+            flex-direction: column;
         }
 
-        .equipements{
+        .description {
             width: 50%;
             display: flex;
             //flex-direction: column;
             justify-content: center;
+
+            @media screen and (max-width: 425px) {
+                width: 100%;
+            }
+        }
+
+        .equipements {
+            width: 50%;
+            display: flex;
+
+            justify-content: center;
+
+            @media screen and (max-width: 425px) {
+                width: 100%;
+            }
         }
     }
 }
