@@ -1,10 +1,9 @@
-
-import '../Sass/Slideshow.scss';
-import arrowLeft from '../assets/images/arrowLeft.png';
-import arrowRight from '../assets/images/arrowRight.png';
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import data from '../data.json';
+import '../Sass/Slideshow.scss'
+import arrowLeft from '../assets/images/arrowLeft.png'
+import arrowRight from '../assets/images/arrowRight.png'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import data from '../data.json'
 
 // permet de définir la fonction Slideshow
 function Slideshow() {
@@ -22,9 +21,8 @@ function Slideshow() {
         if (selectedLogement) {
             setTitle(selectedLogement.title)
             setPictures(selectedLogement.pictures)
-           
         } else {
-            setTitle('Logement non trouvé')
+            // setTitle('Logement non trouvé')
         }
     }, [id])
 
@@ -37,7 +35,7 @@ function Slideshow() {
     const nextImage = () => {
         setCurrentImageIndex((prevIndex) => (prevIndex === pictures.length - 1 ? 0 : prevIndex + 1))
     }
-console.log(currentImageIndex)
+    console.log(currentImageIndex)
     return (
         <>
             {/* Conteneur du diaporama */}
@@ -50,7 +48,7 @@ console.log(currentImageIndex)
                         className="img-FicheLogement"
                     />
                 )}
-                {/* Apermet de d'afficher les flèches de navigation si le carrousel contient plus d'une image */}
+                {/* permet de d'afficher les flèches de navigation si le carrousel contient plus d'une image */}
                 {pictures.length > 1 && (
                     <div className="arrow-container">
                         <img
@@ -68,10 +66,9 @@ console.log(currentImageIndex)
                     </div>
                 )}
                 {/* permet d'afficher la numérotation des images si le carrousel contient des images */}
-                {currentImageIndex}
                 {pictures.length > 0 && (
                     <p className="carrousel-numérotation">
-                        {currentImageIndex + 6}/{pictures.length}
+                        {currentImageIndex + 1}/{pictures.length}
                     </p>
                 )}
             </div>
@@ -79,5 +76,4 @@ console.log(currentImageIndex)
     )
 }
 
-
-export default Slideshow;
+export default Slideshow

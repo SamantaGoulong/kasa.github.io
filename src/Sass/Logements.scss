@@ -9,13 +9,9 @@
     @media screen and (max-width: 1224px) {
         width: 40%;
     }
-
-    @media screen and (max-width: 768px) {
-        width: 70%;
-    }
-
     @media screen and (max-width: 425px) {
         width: 100%;
+        margin: 0;
     }
 
     .logements-card {

@@ -1,4 +1,3 @@
-import '../Sass/Collapse.scss'
 import arrowTop from '../assets/images/arrowTop.png'
 import arrowBottom from '../assets/images/arrowBottom.png'
 import React, { useState } from 'react'
@@ -47,5 +46,4 @@ function Collapse(props) {
         </>
     )
 }
-
 export default Collapse

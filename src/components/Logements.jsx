@@ -6,7 +6,7 @@ import React from 'react'
 function Logements() {
     return (
         <>
-            {/* permetde faire une boucle sur les données et affiche un lien vers la page de détails de chaque logement */}
+            {/* permet de faire une boucle sur les données et affiche un lien vers la page de détails de chaque logement */}
             {data.map((item, index) => (
                 <Link to={'ficheLogement/' + item.id} className="logements-link" key={item.id}>
                     <div className="logements-card">

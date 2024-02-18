@@ -1,15 +1,15 @@
 import '../Sass/FicheLogement.scss'
-// import ImageBannerAbout from '../assets/images/ImageBannerAbout.png';
 import Slideshow from '../components/Slideshow.jsx'
 import Collapse from '../components/Collapse'
 import data from '../data.json'
 import etoileGrise from '../assets/images/etoileGrise.png'
 import etoileRouge from '../assets/images/etoileRouge.png'
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 function FicheLogement() {
     const { id } = useParams()
+    const navigate = useNavigate()
     const [title, setTitle] = useState('')
     const [location, setLocation] = useState('')
     const [tags, setTags] = useState([])
@@ -18,9 +18,8 @@ function FicheLogement() {
     const [description, setDescription] = useState('')
     const [equipments, setEquipments] = useState([])
 
-    const [rating,setRating] = useState('')
+    const [rating, setRating] = useState('')
     const range = [1, 2, 3, 4, 5]
-
 
     useEffect(() => {
         const selectedLogement = data.find((item) => item.id === id)
@@ -34,10 +33,10 @@ function FicheLogement() {
             setEquipments(selectedLogement.equipments)
             setRating(selectedLogement.rating)
         } else {
-            setTitle('Logement non trouvé')
+            navigate('/error')
         }
-    }, [id])
-    
+    }, [id, navigate])
+
     return (
         <>
             <div className="FicheLogement-container">
@@ -56,15 +55,15 @@ function FicheLogement() {
                     </div>
 
                     <div className="FicheLogement-info-right">
-                        <p className="NameFicheLogement numero-rang-name">{name}</p>
-                        <img
-                            src={picture}
-                            alt="profil"
-                            className="PictureFicheLogement numero-rang-profil"
-                        />
-
+                        <div className="profil-proprietaire">
+                            <p className="NameFicheLogement numero-rang-name">{name}</p>
+                            <img
+                                src={picture}
+                                alt="profil"
+                                className="PictureFicheLogement numero-rang-profil"
+                            />
+                        </div>
                         <div className="etoile-container numero-rang-etoile">
-                            
                             {range.map((rangeElem) =>
                                 rating >= rangeElem ? (
                                     <span key={rangeElem.toString()}>

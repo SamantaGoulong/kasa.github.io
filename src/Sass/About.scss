@@ -10,5 +10,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: 425px) {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
     }
 }

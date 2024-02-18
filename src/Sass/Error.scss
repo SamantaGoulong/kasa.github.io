@@ -10,8 +10,11 @@
         font-weight: bold;
         margin: 50px 0px 50px 0px;
 
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 768px) {
             font-size: 100px;
+        }
+        @media screen and (max-width: 425px) {
+            font-size: 80px;
         }
     }
 
@@ -20,8 +23,14 @@
         font-size: 30px;
         margin-bottom: 100px;
 
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 768px) {
             font-size: 20px;
+        }
+        @media screen and (max-width: 425px) {
+            font-size: 18px;
+            margin-left: 60px;
+            margin-right: 60px;
+            text-align: center;
         }
     }
 
@@ -29,5 +38,12 @@
         color: #ff6060;
         font-size: 20px;
         margin-bottom: 100px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width: 425px) {
+            font-size: 16px;
+        }
     }
 }
